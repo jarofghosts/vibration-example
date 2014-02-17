@@ -17,4 +17,4 @@ function to_morse() {
   input_stream.write(document.getElementById('morse-in').value)
 }
 
-input_stream.pipe(morse()).pipe(norse()).pipe(vibrant())
+input_stream.pipe(morse()).pipe(norse(250)).pipe(vibrant())
