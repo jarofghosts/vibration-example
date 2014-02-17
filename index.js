@@ -1,4 +1,12 @@
-var vibrant = require('vibrant')()
+var vibrant = require('vibrant'),
+    morse = require('morse-stream'),
+    norse = require('norse')
+    through = require('through')
 
-vibrant.write([1000, 1000])
-vibrant.write([2000, 1000])
+var input_stream = through()
+
+function to_morse() {
+  input_stream.queue(document.getElementById('morse-in').value)
+}
+
+input_stream.pipe(morse()).pipe(norse()).pipe(vibrant())
