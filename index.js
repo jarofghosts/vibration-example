@@ -5,6 +5,10 @@ var vibrant = require('vibrant'),
 
 var input_stream = through()
 
+var link = document.getElementById('to-morse')
+
+link.addEventListener('click', to_morse)
+
 function to_morse() {
   input_stream.queue(document.getElementById('morse-in').value)
 }
