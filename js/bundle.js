@@ -5,14 +5,13 @@ var vibrant = require('vibrant'),
     through = require('through')
 
 var input_stream = through(examine)
-var inspect = through(examine)
+var inspector = through(examine)
 
 var link = document.getElementById('to-morse')
 
 link.addEventListener('click', to_morse)
 
 function examine(data) {
-  console.log(data.toString())
   this.queue(data)
 }
 
@@ -20,7 +19,7 @@ function to_morse() {
   input_stream.write(document.getElementById('morse-in').value)
 }
 
-input_stream.pipe(morse()).pipe(norse()).pipe(inspect).pipe(vibrant())
+input_stream.pipe(morse()).pipe(norse(250)).pipe(inspector).pipe(vibrant())
 
 },{"morse-stream":2,"norse":5,"through":7,"vibrant":8}],2:[function(require,module,exports){
 var through = require('through'),
