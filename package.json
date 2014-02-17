@@ -15,7 +15,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "browserify -e index.js -o js/bundle.js",
+    "build": "browserify -e index.js --dg false -d -o js/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
