@@ -3,16 +3,11 @@ var vibrant = require('vibrant'),
     norse = require('norse')
     through = require('through')
 
-var input_stream = through(examine)
-var inspector = through(examine)
+var input_stream = through()
 
 var link = document.getElementById('to-morse')
 
 link.addEventListener('click', to_morse)
-
-function examine(data) {
-  this.queue(data)
-}
 
 function to_morse() {
   input_stream.write(document.getElementById('morse-in').value)
