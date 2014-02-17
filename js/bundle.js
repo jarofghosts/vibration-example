@@ -12,7 +12,6 @@ var link = document.getElementById('to-morse')
 link.addEventListener('click', to_morse)
 
 function examine(data) {
-  console.log(data)
   this.queue(data)
 }
 
@@ -20,7 +19,7 @@ function to_morse() {
   input_stream.write(document.getElementById('morse-in').value)
 }
 
-input_stream.pipe(morse()).pipe(norse(250)).pipe(inspector).pipe(vibrant())
+input_stream.pipe(morse()).pipe(norse(150)).pipe(vibrant())
 
 },{"morse-stream":2,"norse":5,"through":7,"vibrant":8}],2:[function(require,module,exports){
 var through = require('through'),
