@@ -12,6 +12,7 @@ var link = document.getElementById('to-morse')
 link.addEventListener('click', to_morse)
 
 function examine(data) {
+  console.log(data)
   this.queue(data)
 }
 
