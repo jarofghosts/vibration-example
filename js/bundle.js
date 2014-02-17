@@ -19,7 +19,7 @@ function to_morse() {
   input_stream.write(document.getElementById('morse-in').value)
 }
 
-input_stream.pipe(morse()).pipe(norse()).pipe(vibrant())
+input_stream.pipe(morse()).pipe(input_pipe).pipe(norse()).pipe(vibrant())
 
 },{"morse-stream":2,"norse":5,"through":7,"vibrant":8}],2:[function(require,module,exports){
 var through = require('through'),
