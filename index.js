@@ -1,7 +1,7 @@
-var vibrant = require('vibrant'),
-    morse = require('morse-stream'),
-    norse = require('norse')
-    through = require('through')
+var vibrant = require('vibrant')
+  , morse = require('morse-stream')
+  , norse = require('norse')
+  , through = require('through')
 
 var input_stream = through()
 
